@@ -54,3 +54,29 @@ Git branches are movable pointers to commits.
 When you create a branch, it starts from the current commit.
 As you commit new changes on that branch, it moves forward. This allows parallel development — multiple lines of work can evolve without clashing.
 
+
+## Exercise 3:  HEAD and Navigating Project History
+✅ 1. View the Commit History with Hashes
+git log
+Copy one of the older commit hashes (something like a1b2c3d...).
+________________________________________
+✅ 2. Checkout an Older Commit
+git checkout 199fd503935a126ebb2abae4461ae792db1edb69
+
+Moves the working directory to how the project looked at that point in time.
+You are now in detached HEAD state.
+________________________________________
+✅ 3. Observe the Current Position of HEAD
+git status
+You’ll see a message saying you're in a detached HEAD state. HEAD is not pointing to a branch but to a specific past commit.
+________________________________________
+✅ 4. Return to the Latest Commit on Main
+git switch main
+You’re now back at the latest snapshot of the main project.
+________________________________________
+✅ 5. Describe the Role of HEAD
+HEAD in Git represents your current position in the project’s history.
+Normally, HEAD points to the latest commit in your current branch.
+When you check out an older commit, HEAD is “detached” and not linked to any branch.
+Moving HEAD lets you navigate your project’s timeline.
+
