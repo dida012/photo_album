@@ -30,3 +30,27 @@ git log
 
 Each commit in Git acts like a snapshot of the entire project at that moment. Even if you only changed one file (like summer.txt), Git still knows the state of all files in the project at that time.
 
+
+## Exercise 2: Understanding Branches as Pointers
+✅ 1. Create a New Branch
+git branch add_captions
+git switch add_captions
+
+A branch is like a pointer to a specific commit. add_captions lets you develop features without affecting the main branch.
+________________________________________
+✅ 2. Add a New File and Commit the Change
+echo Caption for summer photo > captions.txt
+git add captions.txt
+git commit -m Added captions.txt with photo captions
+________________________________________
+✅ 3. Switch Back to the Main Branch and Compare States
+git switch main
+ls
+
+You’ll see that captions.txt is not in the main branch. Git keeps changes in branches separate until you explicitly merge them.
+________________________________________
+✅ 4. Describe How Branches Work
+Git branches are movable pointers to commits.
+When you create a branch, it starts from the current commit.
+As you commit new changes on that branch, it moves forward. This allows parallel development — multiple lines of work can evolve without clashing.
+
